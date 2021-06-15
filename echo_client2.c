@@ -41,9 +41,9 @@ int main(int argc, char *argv[])
 		if(!strcmp(message, "q\n")||!strcmp(message, "Q\n"))
 			break;
 
-		str_len = write(sock, message, strlen(message));
+		str_len = write(sock, message, strlen(message));	// 전달할 문자의 길이
 
-		recv_len=0;
+		recv_len=0;	
 		while(recv_len < str_len)	// 보낸만큼 받아야함
 		{
 			// 전송한 데이터의 크기만큼 데이터를 수신하기 위해 read함수를 반복 호출
