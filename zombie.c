@@ -1,3 +1,9 @@
+/*
+	좀비 프로세스
+	: 프로세스가 생성되고 나서 할일을 다해도 사라지지 않고
+	좀비가 되어 시스템의 중요한 리소스를 차지하는 프로세스
+*/
+
 #include<stdio.h>
 #include<unistd.h>
 
@@ -5,11 +11,11 @@ int main(int argc, char *argv[])
 {
 	pid_t pid=fork();
 
-	if(pid==0)
+	if(pid==0)	// if child process
 	{
 		puts("Hi, I am a child process");
 	}
-	else
+	else		// if parent process
 	{
 		// 자식 프로세스의 ID를 출력하고있다.
 		// 이 값을 통해서 자식 프로세스의 상태를 확인할수 있다.
