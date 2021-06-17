@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
 		return -1;
 	};
 
-	// main함수에서 13행에소 생성한 쓰레드를 대상으로 pthread_join함수를 호출하고 있다. 때문에 main함수는 변수 t_id에 저장된 ID의 쓰레드가 종료될때까지 대기하게 된다.
+	// main함수에서 13행에서 생성한 쓰레드를 대상으로 pthread_join함수를 호출하고 있다. 때문에 main함수는 변수 t_id에 저장된 ID의 쓰레드가 종료될때까지 대기하게 된다.
 	if(pthread_join(t_id, &thr_ret)!=0)
 	{
 		puts("pthread_join() error");

@@ -51,7 +51,9 @@ int main(int argc, char *argv[])
 		char msgbuf[BUF_SIZE];
 		int i, len;
 
-		for(i=0;i<10;i++)	// 서버가 종료되지 않고 클라이언트에게 계속해서 서비스를 제공하기 때문에 어느정도 채워지면 파일을 닫음
+		for(i=0;i<10;i++)	// 서버가 종료되지 않고 클라이언트에게 계속
+		
+		해서 서비스를 제공하기 때문에 어느정도 채워지면 파일을 닫음
 		{
 			// 파이프의 출구인 fds[0]으로 전달되는 데이터를 읽어서 파일에 저장
 			len=read(fds[0], msgbuf, BUF_SIZE);	
